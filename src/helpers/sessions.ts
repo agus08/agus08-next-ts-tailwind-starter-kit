@@ -2,8 +2,8 @@ import Cookies from 'js-cookie'
 
 const isProduction = process.env.NODE_ENV === 'production'
 const tokenStorage = isProduction
-  ? 'FriendchisedDevelopmentUserToken'
-  : 'FriendchisedUserToken'
+  ? 'AppNameDevelopmentUserToken'
+  : 'AppNameUserToken'
 
 const sessions = {
   getToken(): string | null {
