@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'react-alice-carousel/lib/alice-carousel.css';
+@import './animatedHeadline.css';
+@import './DateRangePicker.css';
+@import './Calendar.css';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: bg-backgroundPrimary;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+input:focus-within ~ label,
+input:not(:placeholder-shown) ~ label,
+textarea:focus-within ~ label,
+textarea:not(:placeholder-shown) ~ label {
+  @apply transform scale-95 -translate-y-9 -translate-x-4 italic text-colorText;
+}
+
+input:focus-within ~ label:not([data-icon='false']),
+input:not(:placeholder-shown) ~ label:not([data-icon='false']),
+textarea:focus-within ~ label:not([data-icon='false']),
+textarea:not(:placeholder-shown) ~ label:not([data-icon='false']) {
+  @apply transform scale-95 -translate-y-9 -translate-x-5 italic text-colorText;
+}
+
+input:focus-within ~ .label-icon,
+input:not(:placeholder-shown) ~ .label-icon,
+textarea:focus-within ~ .label-icon,
+textarea:not(:placeholder-shown) ~ .label-icon {
+  @apply transform scale-95 -translate-y-9 -translate-x-3 italic text-colorText;
+}
+
+.custom-img {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+.unset-img {
+  width: 100%;
+}
+
+.unset-img > div {
+  position: unset !important;
+}
+
+.select-component {
+  @apply w-full;
+}
+
+.select-component > div:first-of-type {
+  @apply p-1 rounded-xl border-gray-200;
+}
+
+.custom-select__menu {
+  @apply !rounded-xl;
+}
+
+.custom-select__menu {
+  @apply !rounded-xl;
+}
+
+.custom-select__menu-list {
+  @apply p-2;
+}
+
+.custom-select__single-value {
+  @apply !text-primary2 font-medium;
+}
+
+.custom-select__option {
+  @apply my-1;
+}
+
+.custom-select__option:hover {
+  @apply bg-white text-primary2;
+}
+
+.custom-select__option--is-focused {
+  @apply !bg-gray-50 !text-primary2 rounded-lg;
+}
+
+.custom-select__option--is-selected {
+  @apply !bg-gray-100 !text-primary2 rounded-lg;
+}
+
+/* Custom react-daterange-picker */
+.react-daterange-picker .react-daterange-picker__wrapper {
+  @apply rounded-lg border-gray-200 py-2 px-6 bg-white;
+}
+
+.react-calendar__tile--active {
+  @apply !bg-primary2;
+}
+
+.react-calendar {
+  @apply !border-gray-200 rounded-lg mt-2 p-3 text-sm;
+}
+
+.react-calendar {
+  font-family: 'DM Sans', sans-serif !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+abbr:where([title]) {
+  @apply !no-underline;
+}
+
+.react-calendar__navigation__arrow {
+  @apply flex justify-center items-center;
+}
+
+.react-calendar__navigation__label__labelText {
+  @apply text-xl font-semibold;
+}
+
+thead th {
+  @apply text-left p-5 border-t border-b bg-stone-100 min-w-[150px];
+}
+
+tbody tr td {
+  @apply p-5 border-b text-base;
+}
